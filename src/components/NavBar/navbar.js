@@ -14,10 +14,11 @@ const Navbar = () => {
         <Link className='desktopMenuListItem'>Clients</Link>
         </div>
         <button className='desktopMenuBtn'>
-            <img src='' alt='' className='desktopMenuImg'/>
             Contact Me</button>
     </nav>
   )
 }
 
-export default Navbar
+export default Navbar;
+
+
