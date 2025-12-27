@@ -74,12 +74,12 @@
     display: none;
     object-fit: cover;
     height: 1.8rem;
+    cursor: pointer;
 }
 
 @media screen and (max-width:680px) {
     .mobMenu{
         display: flex;
-
     }
     .desktopMenu{
         display: none;

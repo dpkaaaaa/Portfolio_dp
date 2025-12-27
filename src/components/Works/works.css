@@ -1,4 +1,4 @@
-#works{
+#works {
     margin: 0 auto;
     min-height: calc(100vh - 4rem);
     width: 100%;
@@ -12,49 +12,104 @@
     overflow-x: hidden;
 }
 
-.worksTitle{
+.worksTitle {
     margin: 1rem 0;
     font-size: 3rem;
 }
 
-.worksDesc{
+.worksDesc {
     font-weight: 300;
     font-size: 1rem;
     max-width: 45rem;
+    margin-bottom: 2rem;
 }
 
-
-.worksImgs{
+/* Container for project cards */
+.worksContainer {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
     width: 100%;
-    max-width: 65rem;
-
-
+    align-items: center;
 }
 
-.worksImg{
-   width: 35rem;
-    max-width: 90%;
+/* Each project card without background */
+.projectCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 45rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Project title & description */
+.projectTitle {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.projectDesc {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+.projectImgs {
+    display: flex;             
+    flex-wrap: wrap;           
+    justify-content: center;   
+    gap: 1rem;                
+    width: 100%;
+}
+
+.projectImg {
+    width: 50%;                
+    max-width: 300px;          
     object-fit: cover;
-    margin: 0.5rem;
-    border-radius: 8px; 
+    border-radius: 8px;
 }
 
-.workBtn{
-     background-color: white;
-  color: black;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 25px;
-  font-size: 16px;
-  cursor: pointer;
+
+.workBtn {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
 }
 
-@media screen and(max-width:780px){
-    .worksImg{
-        width: 90;
+.workBtn:hover {
+    background-color: rgb(80, 79, 79);
+    color: white;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 780px) {
+    .projectImg {
+        width: 90%;           
+    }
+
+    .worksTitle {
+        font-size: 2.5rem;
+    }
+
+    .worksDesc {
+        font-size: 0.95rem;
     }
 }
+
